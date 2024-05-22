@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug"
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hi! Welcome to DeepFriedAI</div>
+    <br>
+    <br>
+    <div class="text-5xl font-bold">I'm Josh Lamey</div>
+    <br>
+    <br>
+    <div class="text-3xl py-3 font-bold">MS Data Science graduate, Aspiring Data Scientist and Senior Infrastructure Engineer</div>
+    <br>
+    <div class="py-2">
+      <text class="text-lg">
+       Here you will find my resume, as well as a portfolio detailing projects I've completed in analytics, data science, machine learning and AI.
+      </text>
+    </div>
+    <ul class="list-disc md:columns-1 mx-8">
+      <li>
+    <div class="mt-8">
+      <text class="text-lg">
+        You can click the following button to view my Resume:
+       </text>
+      <a class="btn btn-outline ml-5" href="/resume" target="_self"> Resume</a>
+    </div> </li>
+    <li>
+    <div class="mt-8">
+      <text class="text-lg">
+        Pretty soon, you can click the following button to see my projects:
+       </text>
+      <a href="/projects" target="_self" class="btn btn-outline ml-5">
+        What's Josh gotten into?
+      </a>
+    </div></li>
+  </div>
+<!--
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+  </div>
+
+  <HorizontalCard
+    title="Demo Project 1"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+    badge="NEW"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Demo Project 2"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Demo Project 3"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+    badge="FOSS"
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }  -->
+</BaseLayout>

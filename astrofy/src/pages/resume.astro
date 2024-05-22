@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/resume/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="Resume">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    <p>
+    A seasoned managed service provider Support Engineer with 11 years of experience and a Master’s degree in Data Science, specializing in Natural Language Processing (NLP). 
+    Currently studying for the Microsoft Azure Data Science certification. Proven track record in troubleshooting, case escalation, long-standing case research, 
+    and training junior engineers. Demonstrated expertise in server and performance log trend analysis, customer interaction, and project management.
+    </p>
+    <br>
+    <p>
+    Proficient in data querying, data cleansing, programming in PowerShell, Graph API, Python and R, problem-solving, deep technical analysis, and SQL database management. 
+    Experienced in using AI tools like Copilot and ChatGPT for correspondence and code assistance. Strong soft skills, such as handling client escalations, 
+    effective communication and delivering technical information to a business leader audience.
+    </p>
+    <br>
+    Seeking to leverage these skills and experiences to transition into a Data Science role.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="MS Data Science & Analytics"
+      subtitle="2020 - 2022 at Elmhurst University, Illinois"
+    />
+    <TimeLineElement
+      title="BS Biology"
+      subtitle="1999 - 2003 at University of South Carolina, Spartanburg, SC"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Professional Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Senior M365 and Azure Support Enginer"
+      subtitle="From 2019 to March, 2024 at Avanade, Charlotte, NC"
+    >
+    <li>Promoted roughly 2 years early due to personal performance and technical growth.</li>
+    <li>Matrixed work with PowerBI dashboard creation, involving connecting to multiple sources and cleansing data.</li>
+    <li>Consultative client project work involving M365 License analysis, reducing spend by 22%.</li>
+    <li>Extensive PowerShell and Microsoft Graph integration, querying and report generating experience.</li>
+    <li>Skilled in Power Apps Flow/Automate requirements gathering, design, build and deploy actions.</li>
+    <li>Experience administering Azure Databricks environments.</li>
+    <li>Responsible for meeting SLA with casework, escalations, problem investigations, change request generation and project deliverables, and being flexible and available for junior engineer questions and training.</li>
+    <li>Collaborated with the team to create solutions and help to build knowledge and expertise within the group.</li>
+    <li>Completed Master of Science in Data Science while working full time.</li>
+    </TimeLineElement>
+    <br>
+    <TimeLineElement
+      title="M365 and Azure Support Engineer"
+      subtitle="From 2017 to 2019 at at Avanade, Charlotte, NC"
+    >
+    <li>Managed service provider support engineering.</li>
+    <li>Request, Incident, Problem and Change case creation, investigation and resolution.</li>
+    <li>Mentoring junior engineers in M365 and Azure technologies.</li>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="https://learn.microsoft.com/en-us/users/joshlamey-0990/transcript/v0yp5f1qyg4ll2z" target="_blank"> Click to open my Microsoft Transcript in a new window.</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-3 columns-0 mx-0">
+    <li>Python</li>
+    <li>Data Wrangling</li>
+    <li>Classification Algorithms</li>
+    <li>Regression Algorithms</li>
+    <li>Bayesian Algorithms</li>
+    <li>Data Cleansing</li>
+    <li>Python Notebooks</li>
+    <li>(PCA) Principal Component Analysis</li>
+    <li>(EDA) Exploratory Data Analysis</li>
+    <li>SQL Querying and Administration</li>
+    <li>Statistical Research Design</li>
+    <li>Minimal Viable Product (MVP)</li>
+    <li>(NLP) Natural Language Processing</li>
+    <li>TensorFlow</li>
+    <li>Databricks and Hadoop</li>
+  </ul>
+</BaseLayout>
